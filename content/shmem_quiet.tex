@@ -33,6 +33,10 @@ CALL SHMEM_QUIET
 }
 
 \apinotes{ 
+    {\color{blue}
+    \FUNC{shmem\_quiet} does not have an effect on the ordering between memory 
+    accesses issued at the target PE.}
+
     \FUNC{shmem\_quiet} is most useful as a way of ensuring completion of
     several \PUT{}, \acp{AMO}, memory store, and non-blocking \PUT{}
     and \GET{} routines to symmetric data objects initiated by the calling

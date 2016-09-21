@@ -32,6 +32,10 @@ CALL SHMEM_FENCE
 }
 
 \apinotes{
+    {\color{blue}
+    \FUNC{shmem\_fence} does not have an effect on the ordering between memory 
+    accesses issued at the target PE.}
+
     \FUNC{shmem\_fence} only provides per-\ac{PE} ordering guarantees and does
     not guarantee completion of delivery.  There is a subtle difference between
     \FUNC{shmem\_fence} and \FUNC{shmem\_quiet}, in that, \FUNC{shmem\_quiet}
